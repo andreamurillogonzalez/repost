@@ -19,9 +19,16 @@ public class GradosKelvin {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Introduce los grados: ");
-        int grados = teclado.nextInt();
-        int kelvin = grados + 273;
+        char resp;
+        do {
+            System.out.println("Introduce los grados: ");
+            int grados = teclado.nextInt();
+            int kelvin = grados + 273;
+            System.out.println("Grados kelvin: "+kelvin);
+            System.out.println("Desea continuar? S/N");
+            resp = teclado.next().charAt(0);
+
+        }while(resp=='S' || resp=='s');
     }
-    
+
 }
